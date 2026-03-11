@@ -422,7 +422,36 @@ a{text-decoration: none; color:#000;}
 }
 .card:active > .card__inner > .card__button{background:var(--aex-orange);}
 
-/* LAPTOPS */
+/* footer */
+
+.footer{
+  width: 100%;
+  background: #222222;
+}
+
+.footer__inner{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.footer__block{
+}
+
+.footer__brand{
+  padding: 80px 0 0 0;
+  text-decoration: none;
+}
+
+.social{
+  padding: 0 0 0 184px;
+}
+
+.social--icon{
+  width: 22px;
+  height: 22px;
+}
+
+/* MOBILE DEVICES */
 
 @media screen and (max-width:1560px){
   :root{
