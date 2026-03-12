@@ -87,6 +87,10 @@ a{text-decoration: none; color:#000;}
   border:  1px solid var(--aex-orange);
   color: var(--aex-orange);
 }
+.button--nofill--orange:hover{
+  color: #fff;
+  border:  1px solid #fff;
+}
 
 .button--orange{background:var(--aex-orange); color:#000;}
 .button--orange:hover{background:#000;color:#fff;}
@@ -97,10 +101,15 @@ a{text-decoration: none; color:#000;}
   padding:  0;
 }
 .button--pointer::after{
-  content: '🡥';
+  content: ' ';
   position: absolute;
-  margin: 5px 12px;
-  font-weight: 800;
+  width: 24px;
+  height: 24px;
+  margin: 2px 0 0 7px;
+  background-image: url('img/ico_arrow.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: brightness(1) invert(1);
 }
 
 .button--top::after{
@@ -434,7 +443,7 @@ a{text-decoration: none; color:#000;}
   color: #fff;
   z-index: 15;
 }
-.card:active > .card__inner > .card__button{background:var(--aex-orange);}
+.card:active > .card__inner > .card__button{background: var(--aex-orange);}
 
 /* footer */
 
@@ -446,7 +455,6 @@ a{text-decoration: none; color:#000;}
 .footer__inner{
   display: grid;
   grid-template-columns: 3fr 3fr;
-  /*position: relative;*/
   align-items: left;
 }
 
@@ -458,7 +466,7 @@ a{text-decoration: none; color:#000;}
 
 .footer--brand{
   flex-basis: 100%;
-  padding: 64px 0 0 0;
+  padding: 62px 0 0 0;
 }
 
 
@@ -481,15 +489,20 @@ a{text-decoration: none; color:#000;}
 }
 
 .social{
-  padding: 0 0 0 184px;
+  padding: 0 0 0 178px;
 }
 
-.social--icon{
-  width: 22px;
-  height: 22px;
+.social--icon {
+  width: 24px;
+  height: 24px;
+  filter: invert(61%) sepia(80%) saturate(2039%) hue-rotate(345deg) brightness(101%) contrast(101%);
+}
+.social--icon:hover{
+  filter: brightness(0) invert(1);
 }
 
 .footer__copyrights{
+  display: flex;
   margin-top: 60px;
   border-top: 1px solid #333;
   font-size: 12px;
@@ -497,6 +510,11 @@ a{text-decoration: none; color:#000;}
 }
 .footer__copyrights p{
   padding: 20px 0 60px 0;
+}
+
+.copy--hash{
+  margin-left: auto;
+  /*color: #fff;*/
 }
 
 /* LAPTOPS */
